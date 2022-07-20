@@ -1,4 +1,4 @@
-package org.automatizacion.prueba.tasks;
+package org.automatizacion.prueba.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -7,15 +7,15 @@ import net.serenitybdd.screenplay.actions.Open;
 
 import static org.automatizacion.prueba.utils.GeneralConstants.URL;
 
-public class NavigateTo implements Task {
+public class OpenPage implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.url(URL));
     }
 
-    public static NavigateTo site(){
-        return Tasks.instrumented(NavigateTo.class);
+    public static OpenPage site(){
+        return Tasks.instrumented(OpenPage.class);
     }
 
 }
